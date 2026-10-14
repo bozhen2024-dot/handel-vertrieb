@@ -1,0 +1,1 @@
+(()=>{document.addEventListener('click',event=>{const link=event.target.closest('a[href^="#"]');if(!link)return;let target;try{target=document.getElementById(decodeURIComponent(link.hash.slice(1)))}catch{return}if(!target)return;for(let p=target.parentElement;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;});})();
